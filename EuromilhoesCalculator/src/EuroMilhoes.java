@@ -16,9 +16,6 @@ public class EuroMilhoes {
 		int[] randNum = arr.random(5,50);
 		int[] randEst = arr.random(2,11);
 
-		Vector prizeNum = new Vector();
-		Vector prizeEst = new Vector();
-
 		System.out.println("\nNumeros do jogador");
 		for(int i = 0; i < userNum.length; i++)
 			System.out.print(userNum[i] + " ");

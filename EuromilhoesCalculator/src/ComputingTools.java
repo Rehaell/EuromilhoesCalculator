@@ -57,14 +57,16 @@ public class ComputingTools {
 	
 	
 	public Vector compare(int[] numJog, int[] numSort){
-	//Compare two arrays and returns the n numbers that are equal 
+		//Compare two arrays and returns the n numbers that are equal, void if none found 
 		Vector acertos = new Vector();
+		
 		
 		for(int i = 0; i < numJog.length; i++)
 			for(int j = 0; j < numJog.length; j++)
 				if(numSort[i] == numJog[j]){
 					acertos.add(numJog[j]);
 				}
+		
 		return acertos;
 	}
 
