@@ -2,9 +2,12 @@
 import java.util.*;
 
 public class ComputingTools {
+	
+	
 
 
 	public int[] random(int arrayLength,int minimo, int maximo) {
+		//Returns a non-repetable randomized number array
 		int[] arrayNum = new int[arrayLength];
 		boolean numRepetido = false;
 
@@ -39,8 +42,6 @@ public class ComputingTools {
 		//sorts the final array with no repetitions for nicer look 
 		Arrays.sort(arrayNum);
 		return arrayNum;
-
-
 	}
 
 	//if maximum random number not specified assume 100
@@ -51,6 +52,20 @@ public class ComputingTools {
 	//if minimum random number not specified assume 1
 	public int[] random(int arrayLength, int maximo) {
 		return this.random(arrayLength, 1, maximo);
+	}
+	
+	
+	
+	public Vector compare(int[] numJog, int[] numSort){
+	//Compare two arrays and returns the n numbers that are equal 
+		Vector acertos = new Vector();
+		
+		for(int i = 0; i < numJog.length; i++)
+			for(int j = 0; j < numJog.length; j++)
+				if(numSort[i] == numJog[j]){
+					acertos.add(numJog[j]);
+				}
+		return acertos;
 	}
 
 }

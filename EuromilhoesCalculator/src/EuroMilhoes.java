@@ -36,25 +36,9 @@ public class EuroMilhoes {
 			System.out.print(randEst[i] + " ");
 		}
 
-		for(int i = 0; i < userNum.length; i++)
-			for(int j = 0; j < userNum.length; j++)
-				if(randNum[i] == userNum[j]){
-					prizeNum.add(userNum[j]);
-				}
-
-		for(int i = 0; i < userEst.length; i++)
-			for(int j = 0; j < userEst.length; j++)
-				if(randEst[i] == userEst[j]){
-					prizeEst.add(userEst[j]);
-				}
-
-		if(prizeNum.size() != 0 || prizeEst.size() != 0 ){
-			System.out.println("\n\nNumeros premiados : " + prizeNum);
-			System.out.println("\n\nEstrelas premiadas : " + prizeEst);
-		}
-		else
-			System.out.println("\n\nNão acertou nenhum numero ou estrela!");
-
+		System.out.println("\n\nNumeros premiados : " + arr.compare(userNum, randNum));
+		System.out.println("\n\nEstrelas premiadas : " + arr.compare(userEst, randEst));
+		
 	}
 
 }
